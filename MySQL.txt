@@ -1,0 +1,240 @@
+MySQL is a Software used to manage DataBase (DataBase Management System DBMS)
+DataBase is used to store data.
+
+Types of DataBase:
+1). Relational Database RDBMS 
+	(need SQL language to communicate with DataBase)
+	(All of the data is stored in the form of tables)
+2). NoSQL
+	(it doesnt use table formate)
+	(these are document based)
+
+MySQL can be used in any systems like; Windows, LINUX, MacOs.
+MySQL is an open source software and it uses RDBMS (table formate).
+MySQL uses Table formate (cols -> feilds, rows -> records).
+
+##### Data Types #####
+1). Numeric Types (int(must))
+2). Date/Time Types (Date -> YYYY-MM-DD)
+3). String Types (varchar)
+
+
+----------Starting----------
+
+
+1st we will start phpMyAdmin!
+In cmd: 
+	cd../..
+	cd xampp/mysql/bin (because we will do all work in this folder)
+	mysql -u root -p -h localhost (-u: username, "root" is by default, -p: password, -h: as we are using localhost)
+
+
+:::::C.R.U.D system:::::
+Create, Read, Update, Delete
+
+(By installing XAMPP, MySQL will automatically install in computer system)
+
+
+***** How to see DataBases? *****
+
+--In phpMyAdmin (left side)-- or --In cmd: show Databases;)--
+
+
+***** Creating a DataBase *****
+
+(In navigation bar; SQL section)
+Command: create DATABASE DataBaseName;
+ 
+---OR---
+
+In cmd: create database DataBaseName; 
+
+
+***** Deleting a DataBase *****
+
+(In navigation bar; SQL section)
+Command: Drop DATABASE DataBaseName;
+
+(In navigation bar; Operations section)
+Command: 
+
+--OR--
+
+In cmd: drop database DataBaseName;
+
+
+***** Selecting a DataBase to USE *****
+
+In cmd: use DataBaseName;
+
+(If u want to check that which DataBase are u using then)
+In cmd: select database();
+
+
+****** Creating Tables ******
+
+In cmd:
+Command: CREATE TABLE TableName
+		( col_name  data_type (max-words) not null default "UnNamedUser",
+		  col_name  data_type (max-words) not null default "UnNamesdUser"
+		);
+
+(If not null is used then it means if any coloumn is displayed empty it will consider it equal to 0).
+(If default is used then if user doesnot enter his name then the default username given will be displayed)
+
+In phpMyAdmin (left-side-bar): 
+	1). Click on DataBaseName
+	2). Create a new table
+
+
+***** Displaying Tables Names *****
+
+In cmd:
+Command: show tables;
+
+In phpMyAdmin (left-side-bar): You can see all of the tables minimized under the DataBaseName.
+
+( If u want to know more about tables then:
+
+In cmd:
+Command: decs TableName; , show columns from TableName; 
+
+In phpMyAdmin:
+	Select the table and then go the structure (lying on navigation-bar) )
+
+
+***** Deleting Tables *****
+
+In cmd:
+Command: drop table TableName;
+
+In phpMyAdmin:
+	Just click on DataBaseName, there tables will be shown...Click on Drop of the TableName and it will be deleted.
+
+***** Altering table name *****
+
+In cmd:
+Command: alter table movies rename to movies_db;
+
+***** Inserting into table *****
+
+In cmd:
+Command: insert into TableName values( value1_for_col1, value2_for_col2, and so on... )
+
+
+***** Displaying Table Values *****
+
+In cmd:
+Command: select * from TableName;
+
+
+***** Altering the Cols in Table *****
+
+In cmd:
+
+(for adding a col in table:)
+Command: alter table TableName add col_name data_type (value for datatypes);
+
+for (deleting a col in table:)
+Command: alter table TableName drop column col_name;
+
+
+***** Giving a Unique Key *****
+
+(The unique key is like 'id' attribute in HTML because it is totally different for every id, person or anything. If there are 2 Ali in 1 class: Their name can be same,
+but their id can't be)
+
+In cmd:
+Command: create table TableName (
+		Name varchar (30),
+		Class int,
+		Id int,
+		primary key (id) );
+
+(as we can see now that we have made id as a unique key)
+
+
+***** Auto_Incremeant *****
+
+In cmd:
+Command: create table TableName
+		( Name varchar (30) not null default "NameNotGiven" ,
+		  id int not null auto_increament ,
+		  Class int );
+
+(auto_increament will just automatically increase +1 in a number who is given this auto_increament);
+(where auto_increment is used there a primary key must be used)
+
+
+***** Searching in Table *****
+
+In cmd:
+Command: select * from TableName where table id = 1 ;
+
+(where command will search in all of the table and will show the records having [ id = 1 ] , we can alse search anything by using where command)
+
+
+***** Updating a record in the Table *****
+
+In cmd:
+Command: update TableName set Age = 25 where Name = "Ali";
+
+(This is how u see that where the name is 'Ali' in the table its Age is set to / update to 25 )
+
+
+***** Deleting a record *****
+
+In cmd:
+Command: delete from TableName where id = 3 ;
+
+(We can see that the the record having an [ id = 3 ] will be deleted)
+
+
+***** Using Distinct for different unique values *****
+
+(distinct can be used to see the single value that is used multiple times if that value is searched)
+
+In cmd:
+Command: select distinct Age from TableName;
+
+
+***** Order by *****
+
+In cmd:
+Command: select * from TableName order by ID ; (default is ascending)
+-- OR --
+Comand: select * from TableName order by ID desc; (for descending)
+
+(we use order by to make the given list in ascending/descending order)
+
+
+***** Like Operator in MySQL *****
+
+In cmd:
+Command: select * from where Name like '%aza%';
+
+(To use LIKE OPERATOR you just have to enter some spellings in correct order between '%_____%';
+(Here, i just give the last spellings in my name and the system gave me the result of my name)
+
+(If u want to search a name i.e it is starting from "i" : select * from TableName where Name like "i%";)
+(If u want to seach a name i.e it is ending on "i" ; select * from TableName where Name like "%i";)
+
+
+***** Functions in MySQL *****
+
+max(ID) is used to find the maximum ID number.
+min(ID) is used to find the minimum ID number.
+count(ID) is used to count all numbers.
+sum(ID) is used to sum all of the ID's i.e. 1+2+3=6.
+avg(ID) is used to find the average of all ID's.
+
+In cmd:
+Command: select max(ID) from TableName;
+
+
+***** LOGICAL OPERATORS *****
+
+In cmd:
+Command: select * from TableName where ID > 1 and ID < 6;
+
+( < , > , or or || , and or && , between 1 and 6 , ! or not )

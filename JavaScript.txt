@@ -1,0 +1,367 @@
+*******	1). Ways to print in JavaScript	*******
+
+console.log ("Hello World" , 10-20);
+console.log(document.documentElement);	(Shows html tag with expanding feature)
+console.log(document.body);
+console.log(document.head);
+console.log(document.body.children);
+
+alert("me");
+
+confirm("Are You 18+?"); 	(If pressed on Ok then it will be true but if pressed on Cancel then it will be false)
+For Example:
+	var a = "Are You 18+?";
+	confirm(a);
+
+	-(or)-
+
+	var a = confirm("Are You 18+?");
+	if (a == true)
+	{document.write("You are 18+");}
+
+prompt("Enter Your Name :");	(Used to take an input from user)
+For Example:
+	var a = prompt("Enter Your Name:");
+	document.console("Welcome! " a);
+
+document.write("This is a document");	(We can use html tags in JS also)
+
+
+*******	2). JavaScript console API	*******
+
+console.log("Hello World");
+console.warn("This is a warning");
+console.error("This is an error");
+console.assert(4==4);	(This is used to check out equality)
+
+
+*******	3). JavaScript Variables and Operators	*******
+
+* Datatypes:
+
+1). var	(in old JavaScript)
+2). let	(its scope remains in the current function where used)
+3). const	(value of that variable can not be altered where used)
+
+:::::Premitive:::::
+
+var num1 = 20;
+var num2 = 30.45;
+var str1 = "This is a string";
+var str2 = 'This is also a string';
+var bool1 = true;
+var bool2 = false;
+var und;	(This is undefined in console because it has no value assigned to it).
+var n = null;	(This is different from undefined and has null value).
+
+console.log(num1);
+
+:::::Refrence:::::
+
+* Object:
+
+var marks = {
+	irtaza: 50,
+	waqar: 45.88,
+	ahad: 56
+}
+
+console.log(marks);
+
+* Arrays:
+
+var arr = [1, 2, 3, "String",4, null, 5, true, 6];
+
+console.log(arr);
+console.log(arr[0]);
+arr.length	(Gives length of that array)
+console.log(arr.pop());	(Removes the value of last index of that array)
+console.log(arr.push(___);	(Adds another string or given number into that array)
+arr.shift();	(Removes the value on index 0)
+arr.unshift(___);	(Adds another string on the first index of that array)
+
+let string = "I am irtaza";
+console.log(string.indexOf("irtaza"));	Gives the index of irtaza
+console.log(string.slice(1,3););	Output: I a
+console.log(string.replace("irtaza", "Harry"););
+
+* Operators:
+
+:::::Arithmetic Operator:::::
+
+var a = 10;
+(Now, if i want to change the value of a then)
+a = 11;
+(We will not write var again with a)
+
+:::::Comparison Operators:::::
+
+var x = 10;
+var y = 20;
+console.log(x == y);
+console.log(x <= y);
+console.log(x >= y);
+console.log(x < y);
+console.log(x > y);
+
+:::::Logical Operators:::::
+
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+console.log(!true);
+console.log(!false);
+
+
+*******	3). Fuctions in JavaScript	*******
+
+function avg(a,b)
+{
+	c = a + b;
+	rteurn c;
+}
+
+let fun = () => {
+	.....
+}
+
+c1 = avg(1,2);
+c2 = avg(56,76);
+
+console.log(c1, c2);
+
+
+*******	4). Conditions in JavaScript	*******
+
+var a = 30;
+if (a > 20)
+{
+	console.log("You are not a kid);
+}
+else
+{
+	console.log("You are a kid);
+}
+
+(Same as in C++ you can use if / if-else / if-else-if / if-else-if-else )
+
+
+*******	5). Loops in JavaScript	*******
+
+var arr = [1,2,3,4,5];
+
+(arr.length is used to find the value of the given array)
+
+* For Loop:
+
+for (var i = 0 ; i < arr.length ; i++)
+{
+	console.log(arr[i]);
+}
+
+* forEach Loop:
+
+arr.forEach(function(element){
+	console.log(element);
+})
+
+* While Loop:
+
+let j = 0;
+while(j<arr.length)
+{
+	console.log(arr[j]);
+	j++;
+}
+
+* do-while Loop:
+
+let j = 0;
+do
+{
+	console.log(arr[j]);
+	j++;
+}while(j<arr.length);
+
+
+*******	6). Break and Continue in Javascript	*******
+
+while (true)
+{
+	if (a == 1)
+	{
+		break;
+	}
+	else if (a != 1)
+	{
+		continue;
+	}
+}
+
+
+*******	7). DOM Manipulation	*******
+
+			document.getElementById('id_here');		OR		document.getElementsByClassName('class_here');
+
+(If u want to add CSS which is written in stylesheet by JavaScript)
+let element = document.getElementById('id_here');
+console.log(element);	(This shows those elements which contains the same id/class)
+element[0].classList.add('class_name_which_is_made_in_css_but_not_in_html');	([0] the 1st element of html coming in the given class)
+
+
+(These statements says that add this class from class list on the given id in the Document)
+(Same as u can add u can also remove which is totally opposite from add)
+
+document.getElementByTagName('tag_here');
+
+
+			document.querySelector('.className');		OR 		document.querySelector('#ID');
+
+document.querySelector('.className: first-child or last-child or nth-child(number u want)');
+
+var x = document.querySelector('.className: first-child or last-child or nth-child(number u want)');
+x.style.color = "red";
+
+
+			document.querySelectorAll('.className');	OR		document.querySelector('#ID');
+
+var x = document.querySelectorAll('.className');
+x[0].style.color = "red" ;
+--(OR)--
+var x = document.querySelector('.className: nth-child(odd)');
+for (let i = 0 ; i < x.length ; i++)
+{
+	x[i].style.color = red;
+}
+
+(Basically, loops are used to control repeation in a program, so here we said that x = (total number of items, as x is var), loop should be only run to x.length times)
+(Secondly, we said that in nth-child(odd), select al odd numbers)
+(Now, only style is only applied to odd numbered classes and the loop will run for i times)
+
+
+			Creating a <div> from JS
+
+var x = document.createElement('div')		(div tag created)
+x.className = 'className';				(Adding class name to the div tag created)
+x.id = 'id';						(Adding id to the div tag created)
+
+
+			Adding text into Document/HTML file
+
+var a1 = "I am irtaza";						(Text)
+var a2 = document.createElement('div');			(Tag)
+a2.className = 'a2';
+a2.innerText = 'i am a2';
+var b = document.createElement('div');			(div tag created)
+b.appendchild(a1);						(All of the data in a1 is sent into b(in div created tag))
+b.appendchild(a2);						(All of the data in a2 is sent into b(in div created tag))
+
+
+			Replacing a <div> from JS
+
+document.replaceChild(a2, a1);				(Replacing a1 by a2)
+
+
+			Adding Class into a div tag
+
+let x = document.createElement('div');
+x.className = 'box1';
+x.classList.add('box2');					(Adding a new class into same class)
+x.classList.remove('box3');					(Removing a new class into same class)
+
+
+			Getting HTML/Text from a div tag
+
+let x = document.createElement('div');
+x.innerHTML;
+X.innerText;
+
+
+*******	8). Mouse / Keyboard / Windows Events in JavaScript	*******
+
+* Mouse Event :
+onclick = "JS_script_here"		(single left click)
+oncontextmenu = "JS_script_here"	(single right click)
+ondbclick = "JS_script_here"		(on double left click)
+onmouseover = "Js_script_here"	(it is like hover effect as u hover on that div the function in JS runs)
+onmouseover = "JS_script_here"	(it is opposite to onmouseover as the cursor goes out of the box JS runs)
+
+* Keyboard Event :
+onkeyup = "JS_script_here"
+onkeydown = "JS_script_here"
+
+For Example:
+<div id = "box" onclick = "fun()" style="width: 100px; height: 100px; bg-color: red;"> </div>
+<script>
+function fun()
+{
+	alert("Event Actibvated");
+}
+</script>
+
+
+*******	9). setInterval()		*******
+
+(Display "Hello" every second (1000 milliseconds))
+setInterval(fun(), 1000);
+let a;
+fun = () => {
+	let a = new Date();
+	console.log(a.getHours() + " " + a.getMinutes() + " " + a.getSeconds() );
+}
+
+
+*******	10). localStorage()		*******
+
+localStorage.setItem('name1', 'irtaza1');
+localStorage.setItem('name2', 'irtaza2');
+console.log(localStorage.getItem('name1'));
+localStorage.removeItem('name1');
+localStorage.clear();
+
+(JSON.stringify is a method in JavaScript which converts JS Object or a value to JSON String.)
+
+(if data is in array from)
+
+let arr = ['irtaza3', 'irtaza4'];
+localStorage.setItem('name3', arr);
+localStorage.setItem('name3', JSON.stringify(arr));
+
+(The JSON.parse () method in JavaScript is used to parse a JSON string which is written in a JSON format and return a JavaScript object.)
+
+let arr = ['irtaza3', 'irtaza4'];
+console.log(localStorage.setItem('name34', JSON.stringify(arr)));
+console.log(localStorage.getItem('name34'));
+console.log(JSON.parse(localStorage.getItem('name34')));
+
+
+*******	10). Copy to Clipboard		*******
+
+<html>
+  <head>
+    <title>Title of the document</title>
+  </head>
+  <body>
+    <textarea id="textId">Some copying text</textarea>
+    <button id="copyBtn">Copy Button</button>
+    <script>
+      document.getElementById("copyBtn")
+        .onclick = function() {
+          let text = document.getElementById("textId").value;
+          navigator.clipboard.writeText(text)
+            .then(() => {
+              alert('Text copied to clipboard');
+            })
+            .catch(err => {
+              alert('Error in copying text: ', err);
+            });
+        }
+    </script>
+  </body>

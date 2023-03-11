@@ -1,0 +1,327 @@
+<!---CSS Waves--->
+https://www.shapedivider.app/
+https://app.haikei.app/
+https://mycolor.space/
+https://fffuel.co/bbblurry/
+https://www.framer.com/motion/
+https://chakra-templates.dev/page-sections/carousels
+https://choc-ui.com/docs/installation
+https://colorhunt.co/
+
+<!---CSS Fonts--->
+Bebas Neue ~ Montserrat
+Anton ~ Open sans
+Akkordeon ~ Oswald
+Alfa slab ~ Roboto
+Lucy rose ~ Lato
+Montserrat ~ Autography
+Play fair ~ Nexa
+
+<!---CSS Frameworks--->
+Chakra ui
+Material ui
+Core ui
+UI kit
+Semantic ui
+Milligram
+Bootstrap
+Tailwind css
+
+<!---CSS code--->
+
+<link rel="stylesheet" href="style.css">
+
+It is also used to style the states of the elements
+i.e, :hover (when pointer is pointed then it changes color) , :visited (when site is visited then it changes color)
+Usage:-
+a[href="---"]:visited or :hover { color : brown; }
+
+If u want to add style in a paragraph
+i.e, U want to high light paragraph's 1st line then (:first-line or :second-line)
+Usage:-
+p::first-line{ color : brown; }
+
+Combinator selector:
+It is used to select like all of the <p></p> which are in same tag.
+Usage:-
+article > p { color : brown; }
+article.p { color : brown; }
+
+Universal selector:
+It is used to select all of the styles and formate of html page.
+*{ margin: 0; padding:0; }
+
+But for like <p> Hi there <b> Bold </b> </p>
+Usage:-
+p b { color : brown; }
+
+If u want to add style in the next one opeartors
+Usage:-
+h1+p { color : blue; }
+
+if u want to add styling in even odd form
+div:nth-child(even or odd){}
+(we can also use numbers in the brackets)
+
+
+::Properties::
+
+height: 100px;
+width:100px;
+color : #fffffffff; or rgb(0, 0, 0);
+background-color
+border-color
+
+rbga(__,__,__,__);	(Used in transpirancy)
+
+(Maximum used blend mode in header)
+background-image: url(image.png), black;
+background-blend-mode: multiply; lighten; screen; darken; saturation;
+
+background-image: url("image.jpg")
+background-image: linear-gradient(to left/to right/to top/to bottom/to top right/to top left/to bottom left/to bottom right, black 50%, red 50%);	50%+50%=100%
+background-position: center; or top; or bottom; or left; or right; (It can also be used on different background images)
+background-clip: border-box; padding-box; content-box;
+background-size: 100px; cover;
+background-attachment: scroll; (image scrolls as mouse scrolls and moves with page) or fixed; (image donot scroll as mouse scrolls and doesnot moves with page
+as it is a background so all of the other content lies on it when scrolled)
+background-repeat: noreapet; or repeat(default); or manyothers
+---"DONT USE BACKGROUND COLORS WITH BACKGROUND IMAGES"---
+
+
+::Clip Path::
+
+clip-path: circle (radius at x-axis y-axis);	(radius, x-axis, y-axis can be in % or in px)	(To make or cut a circle inside image)
+clip-path: ellipse (horizontal-radius vertical-radius at x-axis y-axis);	(To make or cut an ellipse inside image)
+clip-path: inset (top right bottom left);		(To cut an inside part of image )
+https://bennettfeely.com/clippy/
+
+
+::Display Property::
+
+display: inline; (Displays an element as an inline element (like <span>). Any height and width properties will have no effect)
+display: block; (Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width)
+display: none; (The element is completely removed)
+display: inline-block; (Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values)
+=> To be continued
+
+
+
+::Position::
+
+position: static (default)
+position: absolute; top: 10px (same as parent element like <p> tag in <div> tag, <div> is parent.)-(All boxes lie on eachother)
+position: relative; top: 10px (same as its own position but changes to be made after this command)
+position: fixed; top: 10px (remains fixed on the screen even if u scroll screen in any direction)
+
+
+
+::Design and croping Image::
+
+clippath property is used here
+https://bennettfeely.com/clippy/
+
+
+
+::z-index::
+
+zindex is used where 2 images or elements are lying on eachother
+Usage: z-index: 1; z-index: 2; (greater the z-index, greater the position)
+
+
+
+::Fonts::
+
+font-family: sansrif;
+font-size: 100px;
+font-style: italic; or bold; or normal;
+font-weight: normal; or bolder; or lighter; 
+text-align: center; or left; or right; or justify;
+<hr style="text-decoration: none;">
+text-decoration: overline; or line-through; or underline; or underline overline;
+text-transform: capitalize(capital every letter); or uppercase(make all capital); or lowercase(make all lower); or none; or full-width;
+text-indent: 0%; or 0px (makes spaces in the start of the line);
+letter-spacing: 0px; or 0%; (makes spaces btw all letters)
+word-spacing: 0px; (makes spaces btw all words)
+line-height: 0px; (makes spaces btw lines)
+text-shadow: 0px (for x-axis) 0px (for y-axis) 0px (for blur-radius) black; (any color)
+box-shadow: offset-x offset-y blur-radius spread-radius color;
+
+
+
+::Box Model::
+
+1) Content Area
+
+2) Padding 
+Usage:-
+padding: 10px solid black;
+
+3) Border
+Usage:-
+border: 10px solid black;
+
+4) Margin
+Usage:-
+margin: 10px solid black;
+
+(height and width of an elment is auto where as u can make it manual by height and width command / Auto is the best as compared to manual)
+
+box-sizing: border-box (width and height remains same whereas contentbox size decreases) or (all of the content, border, padding are in same given width)
+box-sizing: content-box (default)
+
+
+
+::List::
+
+list-style-type: disc / square / circle / roman;
+list-style-position: inside / outside; (these are used to contain list type numbers or not)
+list-style-image: url("image.jpg")
+
+
+
+::Table::
+
+border-spacing: 10px; (used to give space b/w the cells of a table)
+border-collapse: collapse; (used for removing the spaces b/w the border of the all cells. Note: use boder-color: black for checking the spaces b/w cells)
+padding, margin (used in the cell)
+
+important (attribute) !important (RARE CASE)
+
+
+
+::overflow property::
+
+Usage:-
+overflow: hidden; (hides the overflow from any tag i.e. |Over|flow , after=> |over| )
+overflow: visible; (dont hide the text coming out of border (default) |over|flow )
+overflow: scroll; (makes a scrollbar in the border of the tag)
+
+
+
+::Media Quires::
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+    (Any element):before {
+        content: "(Any Content Here)";
+        font-style: (Any);
+        color: (Any);
+    }
+
+    /*We can use the same for after*/
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+    (Any element):before {
+        content: "(Any Content Here)";
+        font-style: (Any);
+        color: (Any);
+    }
+
+    /*not is used before all/screen which goes opposite to the conditon like (max-width)*/
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+    #sidebar ul li a:before {
+        content: "(" attr(data-email) ")";
+        font-style: (Any);
+        color: (Any);
+    }
+
+    /*We can use a function also*/
+}
+
+But if we want to use OR function || , here we can use it by commas
+
+
+
+::Float Property::
+
+float: left, right (its a display: inline-block property)
+(overflow property can also be used because some when we float some part, it can be hidden because all the content overflows on it as overflow makes content inline)
+(if hidden then use overflow: hidden; to make it visible)
+clear: left, right (it is used to make display: block)
+
+
+
+::Flex-Box Properties::
+
+(Better way to align items in rows and cols)
+(flexbox = flexible + box)
+
+display: flex (starting and telling computer that its a flexbox that is to be used here)(use this in parent element)
+flex-direction: row(default), coloumn(align elements in col), row-reverse(align elements in reverse direction in row), coloumn-reverse(align elements in reverse col)
+(Where reverse is used it means it goes to the opposite side of the given side)
+flex-wrap: wrap (used for resposnsiveness, when the screen is made smaller or larger), wrap-reverse(same as wrap but opposite)
+(It only works with width in px)
+
+flex-flow: (flex-direction) (flex-wrap); (Its just a shorthand)
+
+(used for horizontal allignment)
+justify-content: center; (align all of the boxes to center)
+justify-content: space-between; (align equal spaces between all of the boxes excluding end points)
+justify-content: space-evenly; (align equal spaces between all of the boxes including end points)
+justify-content: space-around; (align equal spaces on left and right of the boxes i.e, 2px + 2px = 4px)
+
+(used for vertical allignment)
+align-content: center; flex-start; flex-end;
+
+margin-left, margin-right: auto; is used to make space between 2 boxes (floats towards left/right).
+
+(align-items is used for 1 row but allign-content is used for all)
+align-items: center; (align all the elements in the center of the parent box)
+align-items: flex-start; (default / align all the elements in the upward direction of the box)
+align-items: flex-end; (align all the elements in the downward direction of the box)
+align-self: flex-start; flex-end; center; (same as upper but only used for one item)
+
+order: (any number); (If u have multiple boxes in a parent tag and u want to place them on different places then use order property)
+i.e. order: 1 (for B2); order: 2( for B1); order: 3(for B4); order: 4(for B3)		==>	B2 B1 B4 B3
+
+flex-grow: (any number); (If u want to make its width grow as parent grows)
+flex-shrink: (any number); (It is opposite to shrink)
+
+
+::Grid CSS::
+
+display: grid; (use this in parent container to make number of rows and cols)
+grid-template-row: (no. of rows)i.e. 1fr 1fr 1fr (for 3 rows) (1fr means divide the whole given width of parent by no. of rows)
+grid-template-coloumns: (same as rows but this is for coloumns)
+
+row-gap: (to make gap between rows)
+coloumn-gap: (to make gap between coloumns)
+
+grid-coloumn-start: (number from where u want to start)
+grid-column-end: (number to where u want to end)
+grid-row-start: (same as upper)
+grid-row-end: (same as upper)
+
+justify-items: start; center; end; (used in parent container)
+justify-self: start; center; end; (used for only 1 child container)
+
+place-items: start; center; end; (if u want to allign item in center from all sides)
+place-self: start; center; end;
+
+source.unsplash (for random images)
+
+
+::Transition::
+
+{
+	transition-property: width;
+	transition: 3s ease-in-out;
+	width: 100px;
+}
+
+{
+	width: 300px;
+}
+
+
+::Transform::
+
+backface-visibility: visible;
+
+rotateX(180deg)  (Rotates in x-axis 180 degree)
+rotateY(180deg)  (Rotates in y-axis 180 degree)
+
+transform-origin: left bottom;

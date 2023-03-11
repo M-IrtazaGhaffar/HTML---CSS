@@ -1,0 +1,145 @@
+-----<Html tags>-----
+
+
+<h1>Heading</h1>: h1,h2,h3,h4,h5,h6,h7
+
+<p>Paragraph</p>
+
+<code>Any Programming language here</code>
+
+<br>break
+&nbsp Spacing
+<hr style="text-decoration: none;">Horizontal line
+
+<a data-email="abc@bing.com"(used to show email) href="Any LINK here/____.html file/mailto:irtazaghaffar@gmail.com" target="_blank/_self">Name of LINK style:" text-decoration: none (so no line can be there on link)"</a>
+<a href="#C1">Jump to ch.4</a>
+<h1 id="C1"></h1>
+
+<img src="" alt="Name of pic" width="" length="">
+<video src="" poster="(Thumbnail) controls"></video>
+<iframe src="demo_iframe.html" height="200" width="300" title="Iframe Example"></iframe>
+
+title="Caption for any thing"(Attribute)
+required (attribute) is used for saying user to must fill that place or input area
+
+<pre>This is used for writing poems or quotes"</pre>
+
+<sub>for writing equation in lower size</sub>---<small></small>
+
+<sup>for writing equation in uper size</sup>
+
+<b>bold</b>---<strong>bold</strong>
+
+<i>italic</i>---<em>italic</em>
+
+<mark>highlight</mark>
+
+<del>browser inserts a line on the text</del>
+
+<ins>browser underlines the text</ins>
+
+<blackquote cite="www.w3schools.com">any paragraph or qoute copied from another website</blackquote>
+
+<q>used for quotations</q>
+
+<abbr title="Muhammad Irtaza Ghaffar">MIG</abbr>
+
+<address>Used for writing address and make it italic</address>
+
+<bdo dir="rtl">this changes the direction of text</bdo>
+
+<button>button</button>
+
+<table>
+	<tr>
+		<th>table heading</th>
+	</tr>
+	<tr>
+		<td>table data</td>
+	</tr>
+	<tr>
+		<tf>table footer</tf>
+	</tr>
+</table>
+
+<dl>
+  <dt>name</dt>
+  <dd>discription</dd>
+</dl>
+
+<p>
+                    Male <input type="radio" name="gender" id="male">
+                    Female <input type="radio" name="gender" id="female">
+                    Custom <input type="radio" name="gender" id="custom">
+</p>
+
+<p>
+                Address: <textarea type="address" name="address" rows="5" cols="25">
+</p>
+
+<fieldset>
+                <legend>
+                    Gender
+                </legend>
+</fieldset>
+
+<textarea name="address" id="address" rows="5" cols="25" placeholder="Enter Your Address Here!"></textarea>
+
+<input type="submit" value="Pay Now!">
+
+<input type="date" name="exp_date">
+
+<input type="number" name="card_number">
+
+Dropdown menu: 
+                <select name="card_type">
+                    <option value="visa">Visa</option>
+                    <option value="ubl">UBL</option>
+                    <option value="hbl">HBL</option>
+                    <option value="easypaisa">EasyPaisa</option>
+                    <option value="jazzcash">JazzCash</option>
+                </select>
+
+<ul>(unordered list)
+	<li>(list)</li>
+<ul>
+
+<details>
+	<summary>Tap on the arrow to show the content<summary>
+	<p>Here is the paragraph displayed when you tapped on the upper given arrow and text</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+-----> Tricks <-----
+
+	<div class="nav1" id="nav_btn">
+            <div class="nav_icon">
+                <img src="Nav.png" alt="HamBurger">
+                <ul class="nav_response" id="nav_response">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Work with us</a>
+                    </li>
+                </ul>
+            </div>
+      </div>
+
+Output:
+
+	[icon]
+		Home
+		Contact us
+		Work with us
